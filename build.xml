@@ -135,8 +135,8 @@
 
     For all PRADO developers:
     - test           : run unit tests (results are under /build/test-reports)
+    - functionaltest : run functional tests (requires Selenium Server)
     - coverage       : run unit tests collecting coverage informations
-    - functionaltest : run funcitonal tests (requires Selenium Server)
     - lint           : run lint on framework
     - lint-demos     : run lint on demos
 

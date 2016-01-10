@@ -1,60 +1,43 @@
 <?php
-require_once 'PHPUnit/Extensions/Selenium2TestCase.php';
+require_once 'vendor/autoload.php';
 
 // TODO: stub
-class PradoGenericSelenium2Test extends PHPUnit_Extensions_Selenium2TestCase
+class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
 {
-	public static $browsers = array(
-/*
-		array(
-			'name'    => 'Firefox on OSX',
-			'browserName' => '*firefox',
-			'host'    => '127.0.0.1',
-			'port'    => 4444,
-		),
-*/
-		array(
-			'name'    => 'Chrome on OSX',
-			'browserName' => 'chrome',
-			'sessionStrategy' => 'shared',
-			'host'    => '127.0.0.1',
-			'port'    => 4444,
-		),
-/*
-		array(
-			'name'    => 'Safari on OSX',
-			'browserName' => 'safari',
-			'sessionStrategy' => 'shared',
-			'host'    => '127.0.0.1',
-			'port'    => 4444,
-		),
-*/
-/*
-		array(
-			'name'    => 'Firefox on WindowsXP',
-			'browserName' => '*firefox',
-			'host'    => '127.0.0.1',
-			'port'    => 4445,
-		),
-		array(
-			'name'    => 'Internet Explorer 8 on WindowsXP',
-			'browserName' => '*iehta',
-			'host'    => '127.0.0.1',
-			'port'    => 4445,
-		)
-*/
-	);
-
-	static $baseurl='http://127.0.0.1/prado-master/tests/FunctionalTests/';
-
-	static $timeout=5; //seconds
-
-	protected function setUp()
-	{
-		self::shareSession(true);
-		$this->setBrowserUrl(static::$baseurl);
-		$this->setSeleniumServerRequestsTimeout(static::$timeout);
-	}
+    protected $start_url = 'http://saucelabs.com/test/guinea-pig';
+    public static $browsers = array(
+        // run FF15 on Windows 8 on Sauce
+        array(
+            'browserName' => 'firefox',
+            'desiredCapabilities' => array(
+                'version' => '15',
+                'platform' => 'Windows 2012',
+            )
+        ),
+        // run Chrome on Linux on Sauce
+        array(
+            'browserName' => 'chrome',
+            'desiredCapabilities' => array(
+                'platform' => 'Linux'
+          )
+        ),
+        // run Mobile Safari on iOS
+        //array(
+            //'browserName' => '',
+            //'desiredCapabilities' => array(
+                //'app' => 'safari',
+                //'device' => 'iPhone Simulator',
+                //'version' => '6.1',
+                //'platform' => 'Mac 10.8',
+            //)
+        //)//,
+        // run Chrome locally
+        //array(
+            //'browserName' => 'chrome',
+            //'local' => true,
+            //'sessionStrategy' => 'shared'
+        //)
+    );
 
 	protected function assertAttribute($idattr, $txt)
 	{
@@ -273,8 +256,4 @@ class PradoGenericSelenium2Test extends PHPUnit_Extensions_Selenium2TestCase
 		}
 		$this->assertFalse($found, "Failed asserting that page source does not contain $text");
 	}
-
-
-
-
 }

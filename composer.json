@@ -47,7 +47,8 @@
 		"phpunit/phpunit-story": "*",
 		"phing/phing" : "2.*",
 		"apigen/apigen": "4.*",
-		"satooshi/php-coveralls": "dev-master"
+		"satooshi/php-coveralls": "dev-master",
+		"sauce/sausage": ">=0.15.2"
 	},
 	"provide" : {
 		"pradosoft/prado" : "3.3.0"
