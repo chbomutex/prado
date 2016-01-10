@@ -25,3 +25,6 @@ require_once(PRADO_FRAMEWORK_DIR.'/prado.php');
 
 // Dummy class to workaround Phing trying to instanciate classes removed from Phpunit-selenium
 class PHPUnit_Extensions_SeleniumTestCase { }
+
+// for FunctionalTests
+require_once(__DIR__.'/PradoGenericSelenium2Test.php');
