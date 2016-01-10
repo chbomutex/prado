@@ -42,7 +42,6 @@
 		"ext-xdebug": "*",
 		"phpunit/phpunit" : "4.*",
 		"phpunit/dbunit": ">=1.2",
-		"phpunit/phpunit-selenium": ">=1.2",
 		"phpunit/php-invoker": "*",
 		"phpunit/phpunit-story": "*",
 		"phing/phing" : "2.*",

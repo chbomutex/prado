@@ -1,7 +1,5 @@
 <?php
-require_once '../../vendor/autoload.php';
 
-// TODO: stub
 class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
 {
     protected $start_url = 'http://saucelabs.com/test/guinea-pig';
