@@ -36,7 +36,9 @@ bin/dbunit
 bin/jsonlint
 bin/validate-json
 bin/sauce_config
+bin/sauce_connect
 bin/paratest
+sauce_connect.log
 
 #OSX
 .DS_Store

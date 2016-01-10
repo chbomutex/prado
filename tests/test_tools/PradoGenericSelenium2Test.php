@@ -2,7 +2,7 @@
 
 class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
 {
-    protected $base_url = 'http://localhost:8888';
+    protected $base_url = 'http://localhost:8888/tests/FunctionalTests/';
     public static $browsers = array(
         // run FF15 on Windows 8 on Sauce
         array(
