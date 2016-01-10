@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 // TODO: stub
 class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
