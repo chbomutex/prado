@@ -3,8 +3,6 @@ language: php
 sudo: false
 
 php:
-#  - 5.5
-#  - 5.6
   - 7
 
 matrix:
@@ -27,9 +25,11 @@ before_script:
   - export PATH=./bin/:$PATH
   - export SAUCE_BUILD=$TRAVIS_BUILD_NUMBER
   - export SAUCE_TUNNEL_IDENTIFIER=$TRAVIS_JOB_NUMBER
+  - php -S localhost:8888 &
+  - sleep 3
 
 script:
-  - phing functionaltest
+  - phing coverage
 
-#after_script:
-#  - php ./bin/coveralls -v
+after_script:
+  - php ./bin/coveralls -v

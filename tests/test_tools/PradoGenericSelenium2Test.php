@@ -2,9 +2,10 @@
 
 class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
 {
-    protected $start_url = 'http://localhost:4445';
+    protected $start_url = 'http://localhost:8888';
     public static $browsers = array(
         // run FF15 on Windows 8 on Sauce
+        /*
         array(
             'browserName' => 'firefox',
             'desiredCapabilities' => array(
@@ -12,6 +13,7 @@ class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
                 'platform' => 'Windows 2012',
             )
         ),
+        */
         // run Chrome on Linux on Sauce
         array(
             'browserName' => 'chrome',
