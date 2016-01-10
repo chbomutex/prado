@@ -5,7 +5,6 @@ class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
     protected $start_url = 'http://localhost:8888';
     public static $browsers = array(
         // run FF15 on Windows 8 on Sauce
-        /*
         array(
             'browserName' => 'firefox',
             'desiredCapabilities' => array(
@@ -13,10 +12,10 @@ class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
                 'platform' => 'Windows 2012',
             )
         ),
-        */
+/*
         // run Chrome on Linux on Sauce
         array(
-            'browserName' => 'chrome',
+            'browserName' => 'firefox',
             'desiredCapabilities' => array(
                 'platform' => 'Linux'
           )
@@ -37,6 +36,7 @@ class PradoGenericSelenium2Test extends Sauce\Sausage\WebDriverTestCase
             //'local' => true,
             //'sessionStrategy' => 'shared'
         //)
+*/
     );
 
 	protected function assertAttribute($idattr, $txt)
