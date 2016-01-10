@@ -28,9 +28,11 @@ install:
 
 before_script:
   - export PATH=./bin/:$PATH
+  - export SAUCE_BUILD=$TRAVIS_BUILD_NUMBER
+  - export SAUCE_TUNNEL_IDENTIFIER=$TRAVIS_JOB_NUMBER
 
 script:
-  - phing coverage
+  - phing test
 
-after_script:
-  - php ./bin/coveralls -v
+#after_script:
+#  - php ./bin/coveralls -v
